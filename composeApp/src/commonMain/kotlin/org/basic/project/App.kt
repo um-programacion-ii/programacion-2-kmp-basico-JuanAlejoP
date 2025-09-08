@@ -27,6 +27,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import org.basic.project.bottomBar.BottomBarScreen
 
 
 @Composable
@@ -114,6 +115,22 @@ class MainScreen: Screen {
             ) {
                 Text(
                     text = "Plus Ultra"
+                )
+            }
+
+            Spacer(
+                modifier = Modifier.height(30.dp)
+            )
+
+            Button(
+                onClick = {
+                    navigator.push(
+                        item = BottomBarScreen()
+                    )
+                }
+            ) {
+                Text(
+                    text = "BottomBar"
                 )
             }
         }
